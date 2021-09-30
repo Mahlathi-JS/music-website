@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Music Website</title>
+	<link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#000000">
+	<meta name="viewport" content="width=device-width , initial-scale=1">
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+	<div class="main">
+		<div class="progress_bar" id="Bar"></div>
+		<img src="bgg.jpg" alt="" id="bg">
+
+		<!-- navbar part -->
+		<div class="navbar">
+			<a href="#" id="logo"><i class='bx bxs-bar-chart-alt-2' ></i>&nbsp;Music Website</a>
+            <a onclick="open_close_menu()" id="responsive_menu"><i class='bx bxs-chevron-down' ></i></a>
+
+			<div class="nav_content">
+				<li><a href="#">Home</a></li>
+				<li><a href="#top_tracks">Tracks</a></li>
+				<li><a href="#latest-tracks">Latest Tracks</a></li>
+				<li><a href="#user_comments">Comments</a></li>
+			</div>
+
+            <a onclick="menu_action()" id="menu_btn"><i class='bx bx-menu-alt-left'></i></a>
+			<div class="side_menu">
+				<li><a href="https://soundcloud.com/"><i class='bx bx-category'></i></a></li>
+				<li><a href="https://www.youtube.com/"><i class='bx bx-tv'></i></a></li>
+				<li><a href="https://open.spotify.com/"><i class='bx bxs-movie-play'></i></a></li>
+			</div>
+		</div>
+        
+       <!--  mid part -->
+		<div class="mid_part">
+            <img src="img.jpg" alt="">
+
+			<div class="description">
+				<p id="A_name">Feel The Music</p>
+				<br>
+				<div class="author_desc">
+				   <p>Music and rhythm find their
+                    way into the <br /> secret places
+                    of the soul.</p>
+				</div>
+
+                 <div class="buttons">
+                   <button><i class='bx bx-play'></i></button>
+				   <button><i class='bx bxs-like' ></i></button>
+				   <button><i class='bx bx-share-alt'></i></button>
+				   <button><i class='bx bx-bookmark-alt'></i></button>
+                 </div>
+
+			</div>
+		</div>
+
+        <!-- tracks part -->
+		<div class="top_tracks" id="top_tracks">
+			<p id="heading"><i class='bx bxs-playlist'></i>&nbsp;&nbsp;Top Tracks</p>
+			<div id="track"></div>
+			
+			<div id="track">
+				<img src="song_img/song_img1.jpg" alt="">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+
+				<audio src="songs/2.mp3" id="music"></audio>
+
+				<div id="song_desc">
+				   <p>Mr Thela & Mshayi - Umthandazo waseShaya</p>
+				   <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000+</p>
+				   <p id="message">New</p>
+				</div>
+				<div id="actions_2">
+				  <p><a href="#"><i class='bx bx-share' ></i></a></p>
+				  <p><a href="2.mp3" download><i class='bx bx-download'></i></a></p>
+				</div>
+			</div>
+
+			<div id="track">
+				<img src="song_img/song_img2.jpg" alt="">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="songs/1.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					<p>Micasa - Mamela</p>
+				   <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000+</p>
+				   <p id="message">New</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+				  <p><a href="1.mp3" download><i class='bx bx-download'></i></a></p>
+				</div>
+			</div>
+
+			<div id="track">
+				<img src="song_img/song_img2.jpg" alt="">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="songs/3.m4a" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>Ariane Grande - Thank You</p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000+</p>
+				     <p id="message">New</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+				  <p><a href="3.m4a" download><i class='bx bx-download'></i></a></p>
+				</div>
+			</div>
+
+			<div id="track">
+				<img src="song_img/song_img1.jpg" alt="">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="songs/4.m4a" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>Usher - Burn</p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000+</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+				  <p><a href="4.m4a" download><i class='bx bx-download'></i></a></p>
+				</div>
+			</div>
+
+			<div id="track">
+				<img src="song_img/song_img2.jpg" alt="">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="songs/5.m4a" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>Mario - Let Me Love You</p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000+</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+				  <p><a href="5.m4a" download><i class='bx bx-download'></i></a></p>
+				</div>
+			</div>
+		</div>
+		<br />
+		<br >
+		<hr>
+		<!-- ***** Latest Episodes Area Start ***** -->
+		<section class="poca-latest-epiosodes section-padding-80" id="latest-tracks">
+			<div class="container">
+			  <div class="row">
+				<!-- Section Heading -->
+				<div class="latest_tracks" id="latest-tracks">
+					<p id="heading"><i class='bx bxs-playlist'></i>&nbsp;&nbsp;Latest Tracks</p>
+					<div id="track"></div>
+		
+			  </div>
+			</div>
+		
+			<div class="container">
+			  <div class="row poca-portfolio">
+		
+				<!-- Single gallery Item -->
+				<div class="col-12 col-md-6 single_gallery_item entre wow fadeInUp" data-wow-delay="0.2s">
+				  <!-- Welcome Music Area -->
+				  <div class="poca-music-area style-2 d-flex align-items-center flex-wrap">
+					<div class="poca-music-thumbnail">
+					  <img src="./img/bg-img/1.jpg" alt="">
+					</div>
+					<div class="poca-music-content text-center">
+					  <span class="music-published-date mb-2">August 29, 2021</span>
+					  <h2>H.E.R - Come Through ft Chris Brown</h2>
+					  <div class="music-meta-data">
+						<p>By <a href="#" class="music-author">Admin</a> | <a href="#" class="music-catagory">RNB</a> | <a href="#" class="music-duration">00:03:56</a></p>
+					  </div>
+					  <!-- Music Player -->
+					  <div class="poca-music-player">
+						<audio preload="auto" controls>
+						  <source src="audio/dummy-audio5.mp4">
+						</audio>
+					  </div>
+					  <!-- Likes, Share & Download -->
+					  <div class="likes-share-download d-flex align-items-center justify-content-between">
+						<a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Like (2700)</a>
+						<div>
+						  <a href="#" class="mr-4"><i class="fa fa-share-alt" aria-hidden="true"></i> Share(800)</a>
+						  <a href="#"><i class="fa fa-download" aria-hidden="true"></i> Download (3000)</a>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+
+				<!-- Single gallery Item -->
+				<div class="col-12 col-md-6 single_gallery_item media wow fadeInUp" data-wow-delay="0.2s">
+				  <!-- Welcome Music Area -->
+				  <div class="poca-music-area style-2 d-flex align-items-center flex-wrap">
+					<div class="poca-music-thumbnail">
+					  <img src="./img/bg-img/2.jpg" alt="">
+					</div>
+					<div class="poca-music-content text-center">
+					  <span class="music-published-date mb-2">September 21, 2021</span>
+					  <h2>Zakes Bantwini ft Kasango - Osama</h2>
+					  <div class="music-meta-data">
+						<p>By <a href="#" class="music-author">Admin</a> | <a href="#" class="music-catagory">DEEP HOUSE</a> | <a href="#" class="music-duration">00:05:56</a></p>
+					  </div>
+					  <!-- Music Player -->
+					  <div class="poca-music-player">
+						<audio preload="auto" controls>
+						  <source src="audio/dummy-audio3.m4a">
+						</audio>
+					  </div>
+					  <!-- Likes, Share & Download -->
+					  <div class="likes-share-download d-flex align-items-center justify-content-between">
+						<a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Like (5400)</a>
+						<div>
+						  <a href="#" class="mr-4"><i class="fa fa-share-alt" aria-hidden="true"></i> Share(2000)</a>
+						  <a href="#"><i class="fa fa-download" aria-hidden="true"></i> Download (5000)</a>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+		
+				<!-- Single gallery Item -->
+				<div class="col-12 col-md-6 single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
+				  <!-- Welcome Music Area -->
+				  <div class="poca-music-area style-2 d-flex align-items-center flex-wrap">
+					<div class="poca-music-thumbnail">
+					  <img src="./img/bg-img/3.jpg" alt="">
+					</div>
+					<div class="poca-music-content text-center">
+					  <span class="music-published-date mb-2">September, 2021</span>
+					  <h2>Kabza De Small ft Dj Maphorisa - Abalele</h2>
+					  <div class="music-meta-data">
+						<p>By <a href="#" class="music-author">Admin</a> | <a href="#" class="music-catagory">PIANO</a> | <a href="#" class="music-duration">00:06:56</a></p>
+					  </div>
+					  <!-- Music Player -->
+					  <div class="poca-music-player">
+						<audio preload="auto" controls>
+						  <source src="audio/dummy-audio2.m4a">
+						</audio>
+					  </div>
+					  <!-- Likes, Share & Download -->
+					  <div class="likes-share-download d-flex align-items-center justify-content-between">
+						<a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Like (4500)</a>
+						<div>
+						  <a href="#" class="mr-4"><i class="fa fa-share-alt" aria-hidden="true"></i> Share(170)</a>
+						  <a href="#"><i class="fa fa-download" aria-hidden="true"></i> Download (3000)</a>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+		
+				<!-- Single gallery Item -->
+				<div class="col-12 col-md-6 single_gallery_item media wow fadeInUp" data-wow-delay="0.2s">
+				  <!-- Welcome Music Area -->
+				  <div class="poca-music-area style-2 d-flex align-items-center flex-wrap">
+					<div class="poca-music-thumbnail">
+					  <img src="./img/bg-img/8.jpg" alt="">
+					</div>
+					<div class="poca-music-content text-center">
+					  <span class="music-published-date mb-2">AUGUST 9, 2021</span>
+					  <h2>Sphesihle Sikhakhane - Amaphiko</h2>
+					  <div class="music-meta-data">
+						<p>By <a href="#" class="music-author">Admin</a> | <a href="#" class="music-catagory">AFROSOUL</a> | <a href="#" class="music-duration">00:03:58</a></p>
+					  </div>
+					  <!-- Music Player -->
+					  <div class="poca-music-player">
+						<audio preload="auto" controls>
+						  <source src="audio/dummy-audio4.m4a">
+						</audio>
+					  </div>
+					  <!-- Likes, Share & Download -->
+					  <div class="likes-share-download d-flex align-items-center justify-content-between">
+						<a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Like (2500)</a>
+						<div>
+						  <a href="#" class="mr-4"><i class="fa fa-share-alt" aria-hidden="true"></i> Share(1000)</a>
+						  <a href="#"><i class="fa fa-download" aria-hidden="true"></i> Download (2000)</a>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+		
+				<!-- Single gallery Item -->
+				<div class="col-12 col-md-6 single_gallery_item tech tutor wow fadeInUp" data-wow-delay="0.2s">
+				  <!-- Welcome Music Area -->
+				  <div class="poca-music-area style-2 d-flex align-items-center flex-wrap">
+					<div class="poca-music-thumbnail">
+					  <img src="./img/bg-img/4.jpg" alt="">
+					</div>
+					<div class="poca-music-content text-center">
+					  <span class="music-published-date mb-2">September 9, 2021</span>
+					  <h2>Mr Thela ft Mshayi - Grace</h2>
+					  <div class="music-meta-data">
+						<p>By <a href="#" class="music-author">Admin</a> | <a href="#" class="music-catagory">GQOM</a> | <a href="#" class="music-duration">00:05:45</a></p>
+					  </div>
+					  <!-- Music Player -->
+					  <div class="poca-music-player">
+						<audio preload="auto" controls>
+						  <source src="audio/dummy-audio6.m4a">
+						</audio>
+					  </div>
+					  <!-- Likes, Share & Download -->
+					  <div class="likes-share-download d-flex align-items-center justify-content-between">
+						<a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Like (1000)</a>
+						<div>
+						  <a href="#" class="mr-4"><i class="fa fa-share-alt" aria-hidden="true"></i> Share(800)</a>
+						  <a href="#"><i class="fa fa-download" aria-hidden="true"></i> Download (3000)</a>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+		
+				<!-- Single gallery Item -->
+				<div class="col-12 col-md-6 single_gallery_item tech wow fadeInUp" data-wow-delay="0.2s">
+				  <!-- Welcome Music Area -->
+				  <div class="poca-music-area style-2 d-flex align-items-center flex-wrap">
+					<div class="poca-music-thumbnail">
+					  <img src="./img/bg-img/5.jpg" alt="">
+					</div>
+					<div class="poca-music-content text-center">
+					  <span class="music-published-date mb-2">December 9, 2020</span>
+					  <h2>Track 06 - Let’s Get This!</h2>
+					  <div class="music-meta-data">
+						<p>By <a href="#" class="music-author">Admin</a> | <a href="#" class="music-catagory">RNB</a> | <a href="#" class="music-duration">00:04:34</a></p>
+					  </div>
+					  <!-- Music Player -->
+					  <div class="poca-music-player">
+						<audio preload="auto" controls>
+						  <source src="audio/dummy-audio.mp3">
+						</audio>
+					  </div>
+					  <!-- Likes, Share & Download -->
+					  <div class="likes-share-download d-flex align-items-center justify-content-between">
+						<a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Like (29)</a>
+						<div>
+						  <a href="#" class="mr-4"><i class="fa fa-share-alt" aria-hidden="true"></i> Share(04)</a>
+						  <a href="#"><i class="fa fa-download" aria-hidden="true"></i> Download (12)</a>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+		
+			  </div>
+			</div>
+		
+			<div class="container">
+			  <div class="row">
+				<div class="col-12 text-center">
+				  <a href="#" class="btn poca-btn mt-70">Load More</a>
+				</div>
+			  </div>
+			</div>
+		  </section>
+		  <!-- ***** Latest Episodes Area End ***** -->
+
+        <!-- user comments part -->
+		<div class="user_comments" id="user_comments">
+			<p id="heading"><i class='bx bx-comment-detail'></i>&nbsp;&nbsp;Comments</p>
+            
+           <div class="comments">
+
+           	 <div class="comment">
+           	 	<div id="user_p">
+           	 		<p><i class='bx bx-user' ></i>&nbsp;&nbsp;Lady Bee</p>
+           	 		<p></p>
+           	 	</div>
+           	 	<div id="user_c">
+           	 		<p>Can all Africans gather here and just raise their hands in agreement that at the sound of this melody EVERYTHING will be alright! 🙌💯🔥</p>
+           	 		<div id="social">
+           	 			<a><i class='bx bxl-facebook-circle' ></i></a>
+           	 			<a><i class='bx bxl-twitter' ></i></a>
+           	 		</div>
+           	 	</div>
+           	 </div>
+
+           	 <div class="comment">
+           	 	<div id="user_p">
+           	 		<p><i class='bx bx-user' ></i>&nbsp;&nbsp;Sasenathi Studios</p>
+           	 		<p></p>
+           	 	</div>
+           	 	<div id="user_c">
+           	 		<p>This is a blessing 🥺🥺❤❤. This is MUSIC!! Real Music!🥺🥺🥺 You don't have to understand the lyrics to feel it. You just feel it!!</p>
+           	 		<div id="social">
+           	 			<a><i class='bx bxl-facebook-circle' ></i></a>
+           	 			<a><i class='bx bxl-twitter' ></i></a>
+           	 		</div>
+           	 	</div>
+           	 </div>
+
+           	 <div class="comment">
+           	 	<div id="user_p">
+           	 		<p><i class='bx bx-user' ></i>&nbsp;&nbsp;Peter Nteke</p>
+           	 		<p></p>
+           	 	</div>
+           	 	<div id="user_c">
+           	 		<p>South Africa, the giant of Africa. Beautiful things always come from this beautiful country. This is Africa, our Africa. Beautiful music.</p>
+           	 		<div id="social">
+           	 			<a><i class='bx bxl-facebook-circle' ></i></a>
+           	 			<a><i class='bx bxl-twitter' ></i></a>
+           	 		</div>
+           	 	</div>
+           	 </div>
+
+           	<div class="comment">
+           	 	<div id="user_p">
+           	 		<p><i class='bx bx-user' ></i>&nbsp;&nbsp;Precious Eze</p>
+           	 		<p></p>
+           	 	</div>
+           	 	<div id="user_c">
+           	 		<p>This song feels like a prayer that has already been answered 🙏😭🔥</p>
+           	 		<div id="social">
+           	 			<a><i class='bx bxl-facebook-circle' ></i></a>
+           	 			<a><i class='bx bxl-twitter' ></i></a>
+           	 		</div>
+           	 	</div>
+           	 </div>
+
+           </div>
+
+		</div>
+        
+
+  <!-- ***** Featured Guests Area Start ***** -->
+  <div class="popular_creator">
+	<p id="heading"><i class='bx bx-trophy' ></i>&nbsp;&nbsp;Featured Guests</p>
+	 <div class="artists_list">
+
+      <div class="row justify-content-around">
+        <!-- Single Featured Guest -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="single-featured-guest mb-80">
+            <img src="img/bg-img/25.jpg" alt="">
+            <div class="guest-info">
+              <h5>Alfred Day</h5>
+              <span>PRODUCER</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Featured Guest -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="single-featured-guest mb-80">
+            <img src="img/bg-img/26.jpg" alt="">
+            <div class="guest-info">
+              <h5>Jayden White</h5>
+              <span>DRUMMER</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Featured Guest -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="single-featured-guest mb-80">
+            <img src="img/bg-img/27.jpg" alt="">
+            <div class="guest-info">
+              <h5>Vincent Reid</h5>
+              <span>ARTIST</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** Featured Guests Area End ***** -->
+
+		<!-- popular creator part -->
+		<div class="popular_creator">
+           <p id="heading"><i class='bx bx-trophy' ></i>&nbsp;&nbsp;Popular Creator</p>
+            <div class="artists_list">
+
+            	<div class="artist">
+            		<img src="img/chris.jpg" alt="">
+            		<div class="artist_desc">
+            			<p>Chris Brown</p>
+            			<p><i class='bx bx-like' ></i>&nbsp;&nbsp;2700+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>800+</p>
+            		</div>
+            	</div>
+
+            	<div class="artist">
+            		<img src="img/kabza.jpg" alt="">
+            		<div class="artist_desc">
+            			<p>Kabza & Dj Maphorisa</p>
+            			<p><i class='bx bx-like' ></i>&nbsp;&nbsp;5400+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>2000+</p>
+            		</div>
+            	</div>
+
+            	<div class="artist">
+            		<img src="img/zakes.jpg" alt="">
+            		<div class="artist_desc">
+            			<p>Zakes Bantwini</p>
+            			<p><i class='bx bx-like' ></i>&nbsp;&nbsp;4500+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>170+</p>
+            		</div>
+            	</div>
+
+            	<div class="artist">
+            		<img src="img/siphe.jpg" alt="">
+            		<div class="artist_desc">
+            			<p>Siphesihle Sikhakhane</p>
+            			<p><i class='bx bx-like' ></i>&nbsp;&nbsp;2500+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>1000+</p>
+            		</div>
+            	</div>
+
+            	<div class="artist">
+            		<img src="img/thela.jpg" alt="">
+            		<div class="artist_desc">
+            			<p>Mr Thela & Mshayi</p>
+            			<p><i class='bx bx-like' ></i>&nbsp;&nbsp;1000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>800+</p>
+            		</div>
+            	</div>
+
+            	<div class="artist">
+            		<img src="img/ariane.jpg" alt="">
+            		<div class="artist_desc">
+            			<p>Arine Grande</p>
+            			<p><i class='bx bx-like' ></i>&nbsp;&nbsp;29+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>04+</p>
+            		</div>
+            	</div>
+
+            </div>
+		</div>
+
+			  <!-- ***** Newsletter Area Start ***** -->
+	  <section class="poca-newsletter-area bg-img bg-overlay pt-50 jarallax" style="background-image: url(img/bg-img/15.jpg);">
+		<div class="container">
+		  <div class="row align-items-center">
+			<!-- Newsletter Content -->
+			<div class="col-12 col-lg-6">
+			  <div class="newsletter-content mb-50">
+				<h2>Sign Up To Newsletter</h2>
+				<h6>Subscribe to receive information on our latest music</h6>
+			  </div>
+			</div>
+			<!-- Newsletter Form -->
+			<div class="col-12 col-lg-6">
+			  <div class="newsletter-form mb-50">
+				<form action="#" method="post">
+				  <input type="email" name="nl-email" class="form-control" placeholder="Your Email">
+				  <button type="submit" class="btn">Subscribe</button>
+				</form>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section> 
+	  <!-- ***** Newsletter Area End ***** -->
+
+        <!-- footer part -->
+		<div class="footer">
+			<a id="logo"><i class='bx bxs-bar-chart-alt-2' ></i>&nbsp;Music Website</a>
+		</div>
+
+	</div>
+
+  <!--Custom js-->
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,861 @@
+/* Import Fonts & All CSS */
+@import url(css/default-assets/hkgrotesk-fonts.css);
+@import url(css/bootstrap.min.css);
+@import url(css/animate.css);
+@import url(css/default-assets/classy-nav.css);
+@import url(css/owl.carousel.min.css);
+@import url(css/magnific-popup.css);
+@import url(css/default-assets/audioplayer.css);
+@import url(css/font-awesome.min.css);
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'poppins', sans-serif;
+}
+html{
+	scroll-behavior: smooth;
+}
+body{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	background: #000000;
+}
+.main{
+	min-height: 100vh;
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.main #bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	pointer-events: none;
+	object-fit: cover;
+	opacity: 0.7;
+	background-blend-mode: overlay;
+}
+.main:before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+	z-index: 10;
+}
+
+/*mid part*/
+.mid_part{
+	position: relative;
+	margin-top: 7em;
+	min-height: 220px;
+	width: 85%;
+	z-index: 10;
+	display: flex;
+	align-content: center;
+	overflow: hidden;
+}
+.mid_part img{
+   height: 220px;
+}
+.description{
+	padding: 10px;
+}
+.description .author_desc{
+	width: 20em;
+    word-break: break-all;
+}
+.description p{
+	color: rgba(255,255,255,0.5);
+}
+.description #A_name{
+	color: #fff;
+    font-size: 3em;
+    font-weight: bold;
+}
+.description .buttons{
+	margin-top: 25px;
+	display: flex;
+	align-items: center;
+}
+.description .buttons button{
+    outline: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    background: #E91E63;
+    color: #fff;
+
+}
+.description .buttons button:not(:first-child){
+	margin-left: 0.5em;
+	background: none;
+	color: #fff;
+	border: 1px solid rgba(255,255,255,0.1);
+}
+.description .buttons a{
+	text-decoration: none;
+	font-size: 2em;
+}
+
+/*menu button*/
+#menu_btn{
+    position: fixed;
+    top: 4px;
+    left: 4px;
+    display: inline-block;
+    font-size: 2em;
+	padding: 7px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	z-index: 100;
+    background: rgba(0,0,0,0.9);
+}
+
+
+/*navbar*/
+.navbar{
+	position: relative;
+	z-index: 100;
+	height: 55px;
+	width: 100%;
+	padding: 0 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: rgba(255,255,255,0.03);
+}
+.navbar #logo{
+	color: #fff;
+	font-size: 1.8em;
+	text-decoration: none;
+	cursor: pointer;
+	margin-left: 4em;
+	font-family: cursive;
+}
+.nav_content{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+.nav_content li{
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+.nav_content li:last-child{
+	padding: 5px 12px;
+	border-radius: 5px;
+	background:  #E91E63;
+}
+.nav_content li a{
+	text-decoration: none;
+	color: #ccc;
+	font-size: 1.2em;
+}
+.nav_content li:last-child a{
+	color: #fff;
+	font-size: 1.1em;
+}
+
+
+/*side menu*/
+.side_menu{
+	transform: translateX(-60px);
+	transition: 0.5s;
+	width: 50px;
+	height: 100vh;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background: rgba(0,0,0,0.9);
+	left: 0;
+	top: 56px;
+	padding: 7px 5px;
+}
+.side_menu li{
+	list-style: none;
+	display: inline-block;
+	padding: 7px;
+}
+.side_menu li:not(:first-child){
+	margin: 10px 0;
+}
+.side_menu li:hover{
+	background:  #E91E63;
+}
+.side_menu li i{
+	color: #fff;
+	font-size: 1.8em;
+	cursor: pointer;
+}
+
+.side_nav_active{
+   transform: translateX(0);
+}
+
+
+/*top_tracks (songs)*/
+.top_tracks{
+	margin-top: 10em;
+	min-height: 220px;
+	width: 85%;
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+}
+.top_tracks #track{
+	position: relative;
+    width: 100%;
+    display: flex;
+	align-items: center;
+    min-height: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.top_tracks #track:not(:first-child){
+   margin-top: 8px;
+}
+.top_tracks #track:hover{
+	background: rgba(255,255,255,0.05);
+}
+.top_tracks #track img{
+	height: 50px;
+	width: 50px;
+	object-fit: cover;
+}
+.top_tracks #track p{
+	color: #fff;
+}
+#actions{
+	padding: 0 5px;
+	min-width: 5%;
+	display: flex;
+	align-items: center;
+}
+#actions i{
+	cursor: pointer;
+}
+#actions p:not(:first-child){
+	margin-left: 15px;
+}
+.top_tracks #actions a{
+	text-decoration: none;
+	display: inline-block;
+	padding: 5px;
+	color: #ccc;
+	font-size: 2em;
+}
+.top_tracks #actions a:first-child{
+	font-size: 1.5em;
+	margin-left: 10px;
+}
+#actions i:hover{
+	color: #E91E63;
+}
+/*song description part*/
+#song_desc{
+	position: relative;
+	flex: 1;
+	padding-left: 10px;
+}
+#song_desc #message{
+	position: absolute;
+	bottom: 5px;
+	right: 2.5em;
+	color: #EC407A;
+}
+#song_desc #total_download{
+	position: absolute;
+	bottom: 10px;
+	right: 22%;
+	color: #EC407A;
+}
+#song_desc p:nth-child(1){
+	text-transform: capitalize;
+}
+#song_desc p:nth-child(2){
+	opacity: 0.6;
+	margin-top: 5px;
+	font-size: 0.9em;
+}
+
+/*all id ~ heading*/
+#heading{
+	color: #fff;
+	font-size: 1.8em;
+	font-family: cursive;
+}
+
+/*actions_2 (share & download button)*/
+#actions_2{
+	min-width: 5%;
+	padding: 3px;
+	display: flex;
+	justify-content: right;
+}
+#actions_2 a{
+    color: #fff;
+}
+#actions_2 p{
+	font-size: 1.2em;
+}
+#actions_2 p:first-child{
+	margin-right: 12px;
+}
+
+/*top progress bar*/
+.progress_bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(to right, #cc33ff 0%, #ff0066 100%);
+  width: 0%;
+  z-index: 100;
+}
+
+
+/*user comments*/
+.user_comments{
+	margin-top: 5em;
+	min-height: 200px;
+	width: 85%;
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+}
+.user_comments  #heading{
+	color: #fff;
+	font-size: 1.8em;
+}
+.user_comments .comments{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 20px;
+	min-height: 230px;
+}
+.comments .comment{
+	width: 24%;
+	padding: 10px;
+	border: 1px solid rgba(255,255,255,0.1);
+}
+.comments .comment p{
+	color: #fff;
+}
+.comment #user_p{
+	display: flex;
+    height: 30%;
+    width: 100%;
+}
+.comment #user_p p{
+    font-size: 1.3em;
+}
+.comment #user_p p:nth-child(2){
+	margin-left: 5px;
+}
+#social{
+	margin-top: 15px;
+}
+#social a{
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+}
+#user_c{
+	opacity: 0.7;
+	word-break: break-all;
+}
+#user_c p{
+	font-size: 0.9em;
+	letter-spacing: 1px;
+}
+
+/*scroll bar style*/
+::-webkit-scrollbar {
+	height: 8px;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(to right ,transparent, #EC407A);
+	border-radius: 5px;
+}
+
+/*popular_creator*/
+.popular_creator{
+	margin: 5em 0;
+	min-height: 100px;
+	width: 85%;
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+}
+.artists_list{
+	margin-top: 2em;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 200px;
+	overflow-x: scroll;
+}
+.artist{
+	position: relative;
+	height: 180px;
+	border-radius: 2px;
+	border: 1px solid rgba(255,255,255,0.3);
+}
+.artist:before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
+	z-index: 10;
+}
+.artist:not(:first-child){
+	margin-left: 10px;
+}
+.artist_desc{
+	width: 100%;
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	z-index: 50;
+}
+.artist_desc p:nth-child(1){
+	color: #fff;
+	margin-bottom: 5px;
+}
+.artist_desc p:nth-child(2){
+	color: rgba(255,255,255,0.8);
+	font-size: 0.8em;
+}
+.artist img{
+	width: 10em;
+	height: 100%;
+	object-fit: cover;
+}
+
+/*footer*/
+.footer{
+    margin: 0.7em 0;
+	width: 85%;
+	z-index: 10;
+	display: flex;
+	justify-content: space-between;
+}
+.footer .social_handle{
+	font-size: 1.5em;
+	color: #fff;
+}
+.footer .social_handle i{
+	margin: 0 5px;
+}
+.footer #logo{
+    color: #fff;
+    font-size: 1.5em;
+    font-family: cursive;
+}
+
+
+/*down arrow icon (this arrow visible when screen size will be 700px)*/
+#responsive_menu{
+	font-size: 2em;
+	color: #fff;
+	display: none;
+}
+
+/*these codes will only execute when the screen size will be 700px*/
+@media(max-width: 700px){
+	#responsive_menu{
+	   display: block;
+    }
+	.top_tracks{
+		width: 95%;
+	}
+	.user_comments,.mid_part{
+		width: 95%;
+	}
+	.comments{
+		min-height: 230px;
+		align-items: center;
+        flex-direction: column;
+	}
+	.comments .comment:not(:first-child){
+		margin-top: 15px;
+	}
+	.comments .comment{
+		width: 100%;
+		padding: 15px 10px;
+	}
+	.description .buttons a{
+	   font-size: 1em;
+    }
+    .description .buttons button{
+    	font-size: 1.2em;
+    	padding: 5px 15px;
+    }
+    .description #A_name{
+    	font-size: 2em;
+    }
+    .mid_part{
+    	height: 180px;
+    }
+    .nav_content{
+       position: absolute;
+       width: 200px;
+       top: 55px;
+       right: 0;
+       padding: 5px;
+       flex-direction: column;
+       background: rgba(0,0,0,0.9);
+       transition: 0.5s;
+       max-height: 0px;
+       overflow: hidden;
+    }
+    #total_download{
+    	display: none;
+    }
+    .nav_content li{
+    	margin: 5px;
+    }
+    #song_desc #message{
+    	bottom: 3px;
+    	font-size: 0.9em;
+    }
+    .mid_part img{
+       height: 200px;
+     }
+     .description .author_desc{
+	   width: 15em;
+	}
+	.popular_creator{
+		width: 95%;
+	}
+	.active_top_navbar{
+	   max-height: 100vh;     
+    }
+
+}
+
+/* & these codes will execute when the screen size will be 500px*/
+@media(max-width: 500px){
+    #song_desc p:nth-child(1){
+    	font-size: 0.9em;
+    }
+    .description .buttons button{
+    	font-size: 1.2em;
+    	padding: 5px 10px;
+    }
+    .description p{
+    	font-size: 0.88em;
+    }
+    .mid_part img{
+       height: 190px;
+     }
+    #actions a:first-child{
+	   display: none;
+    }
+    .description .author_desc{
+	   width: 12em;
+	}
+	.comments .comment{
+		padding-bottom: 25px;
+	}
+}
+
+/* :: 9.0 Music CSS */
+.poca-music-area {
+	position: relative;
+	z-index: 2;
+	background-color: #ffffff; }
+	.poca-music-area .poca-music-thumbnail {
+	  position: relative;
+	  z-index: 1;
+	  -webkit-box-flex: 0;
+	  -ms-flex: 0 0 260px;
+	  flex: 0 0 260px;
+	  max-width: 260px;
+	  width: 260px; }
+	  @media only screen and (min-width: 768px) and (max-width: 991px) {
+		.poca-music-area .poca-music-thumbnail {
+		  -webkit-box-flex: 0;
+		  -ms-flex: 0 0 300px;
+		  flex: 0 0 300px;
+		  max-width: 300px;
+		  width: 300px; } }
+	  @media only screen and (max-width: 767px) {
+		.poca-music-area .poca-music-thumbnail {
+		  -webkit-box-flex: 0;
+		  -ms-flex: 0 0 100%;
+		  flex: 0 0 100%;
+		  max-width: 100%;
+		  width: 100%; } }
+	.poca-music-area .poca-music-content {
+	  -webkit-box-flex: 0;
+	  -ms-flex: 0 0 calc(100% - 260px);
+	  flex: 0 0 calc(100% - 260px);
+	  max-width: calc(100% - 260px);
+	  width: calc(100% - 260px);
+	  position: relative;
+	  z-index: 1;
+	  padding: 30px; }
+	  @media only screen and (min-width: 768px) and (max-width: 991px) {
+		.poca-music-area .poca-music-content {
+		  -webkit-box-flex: 0;
+		  -ms-flex: 0 0 calc(100% - 300px);
+		  flex: 0 0 calc(100% - 300px);
+		  max-width: calc(100% - 300px);
+		  width: calc(100% - 300px); } }
+	  @media only screen and (max-width: 767px) {
+		.poca-music-area .poca-music-content {
+		  padding: 20px;
+		  -webkit-box-flex: 0;
+		  -ms-flex: 0 0 100%;
+		  flex: 0 0 100%;
+		  max-width: 100%;
+		  width: 100%; } }
+	  .poca-music-area .poca-music-content .music-published-date {
+		font-size: 12px;
+		display: block;
+		text-transform: uppercase;
+		color: #f55656;
+		letter-spacing: 1px;
+		font-weight: bold; }
+	  .poca-music-area .poca-music-content h2 {
+		font-size: 36px;
+		display: block;
+		margin-bottom: 5px;
+		line-height: 1.3; }
+		@media only screen and (min-width: 992px) and (max-width: 1199px) {
+		  .poca-music-area .poca-music-content h2 {
+			font-size: 24px; } }
+		@media only screen and (min-width: 768px) and (max-width: 991px) {
+		  .poca-music-area .poca-music-content h2 {
+			font-size: 24px; } }
+		@media only screen and (max-width: 767px) {
+		  .poca-music-area .poca-music-content h2 {
+			font-size: 20px; } }
+	  .poca-music-area .poca-music-content .music-meta-data p {
+		text-transform: uppercase;
+		color: #666666;
+		font-size: 14px; }
+		@media only screen and (max-width: 767px) {
+		  .poca-music-area .poca-music-content .music-meta-data p {
+			font-size: 12px; } }
+		.poca-music-area .poca-music-content .music-meta-data p a {
+		  text-transform: uppercase;
+		  color: #666666;
+		  font-size: 14px; }
+		  @media only screen and (max-width: 767px) {
+			.poca-music-area .poca-music-content .music-meta-data p a {
+			  font-size: 12px; } }
+		  .poca-music-area .poca-music-content .music-meta-data p a:focus, .poca-music-area .poca-music-content .music-meta-data p a:hover {
+			color: #f55656; }
+	  .poca-music-area .poca-music-content .likes-share-download {
+		position: relative;
+		z-index: 1;
+		padding-top: 15px;
+		border-top: 1px solid #ebebeb; }
+		.poca-music-area .poca-music-content .likes-share-download a {
+		  color: #a6a6a6;
+		  font-size: 14px; }
+		  @media only screen and (max-width: 767px) {
+			.poca-music-area .poca-music-content .likes-share-download a {
+			  font-size: 12px; } }
+		  .poca-music-area .poca-music-content .likes-share-download a:focus, .poca-music-area .poca-music-content .likes-share-download a:hover {
+			color: #f55656; }
+	.poca-music-area.style-2 {
+	  margin-bottom: 30px;
+	  background-color: #ffffff;
+	  box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.1); }
+	  .poca-music-area.style-2 .poca-music-thumbnail {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+		width: 100%; }
+	  .poca-music-area.style-2 .poca-music-content {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+		width: 100%; }
+  
+  .audioplayer {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: auto;
+	border: none;
+	border-radius: 0;
+	padding-bottom: 10px; }
+	.audioplayer .audioplayer-playpause {
+	  width: 35px;
+	  height: 35px;
+	  transition: all 0 ease-in-out; }
+	.audioplayer .audioplayer-bar::before {
+	  top: 2px;
+	  height: 5px;
+	  background-color: #e1e1e1; }
+	.audioplayer .audioplayer-bar > div {
+	  top: 2px; }
+	.audioplayer .audioplayer-bar-loaded {
+	  display: none; }
+	.audioplayer .audioplayer-bar-played {
+	  background: #f55656;
+	  height: 5px; }
+	  .audioplayer .audioplayer-bar-played::after {
+		display: none; }
+	.audioplayer .audioplayer-time {
+	  font-size: 14px;
+	  color: #232323;
+	  font-weight: 600; }
+	.audioplayer .audioplayer-volume-adjust > div {
+	  height: 5px; }
+	.audioplayer .audioplayer-volume-adjust div div {
+	  background-color: #f55656;
+	  height: 5px; }
+	.audioplayer:not(.audioplayer-playing) .audioplayer-playpause, .audioplayer:not(.audioplayer-playing) .audioplayer-playpause:hover {
+	  background-color: #f55656; }
+	.audioplayer:not(.audioplayer-playing) .audioplayer-playpause a {
+	  margin-left: 3px;
+	  border-left: 12px solid #ffffff; }
+  
+  .poca-projects-menu {
+	position: relative;
+	z-index: 1; }
+	.poca-projects-menu .btn {
+	  color: #a6a6a6;
+	  font-size: 20px;
+	  padding: 0 10px;
+	  background-color: transparent;
+	  border-radius: 0;
+	  font-weight: 600;
+	  position: relative;
+	  z-index: 1; }
+	  @media only screen and (max-width: 767px) {
+		.poca-projects-menu .btn {
+		  font-size: 14px; } }
+	  .poca-projects-menu .btn.active {
+		color: #232323; }
+		.poca-projects-menu .btn.active::after {
+		  position: absolute;
+		  bottom: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 2px;
+		  background-color: #f55656;
+		  content: '';
+		  z-index: 1; }
+	  .poca-projects-menu .btn:focus, .poca-projects-menu .btn:hover {
+		box-shadow: none;
+		color: #232323; }
+  
+  .poca-music-player.style-2 .audioplayer {
+	background-color: transparent !important; }
+	.poca-music-player.style-2 .audioplayer .audioplayer-time {
+	  color: #ffffff; }
+  
+  .single-podcast-breadcumb .poca-music-area .poca-music-content .likes-share-download {
+	border-color: rgba(255, 255, 255, 0.2); }
+  
+  /* :: 10.0 Guest CSS */
+  .single-featured-guest {
+	position: relative;
+	z-index: 1; }
+	.single-featured-guest img {
+	  width: 100%; }
+	.single-featured-guest .guest-info {
+	  position: relative;
+	  z-index: 1;
+	  margin-top: 30px;
+	  text-align: center; }
+	  .single-featured-guest .guest-info h5 {
+		font-size: 22px;
+		display: block;
+		margin-bottom: 5px; }
+	  .single-featured-guest .guest-info span {
+		display: block;
+		color: #f55656;
+		font-size: 14px;
+		margin-bottom: 0; }
+
+  
+  /* :: 12.0 Newsletter CSS */
+  .poca-newsletter-area {
+	position: relative;
+	z-index: 1;
+	background-attachment: fixed; }
+	.poca-newsletter-area .newsletter-content h2 {
+	  color: #ffffff;
+	  font-size: 48px;
+	  margin-bottom: 5px; }
+	  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+		.poca-newsletter-area .newsletter-content h2 {
+		  font-size: 36px; } }
+	  @media only screen and (min-width: 768px) and (max-width: 991px) {
+		.poca-newsletter-area .newsletter-content h2 {
+		  font-size: 36px; } }
+	  @media only screen and (max-width: 767px) {
+		.poca-newsletter-area .newsletter-content h2 {
+		  font-size: 24px; } }
+	.poca-newsletter-area .newsletter-content h6 {
+	  color: #ffffff;
+	  margin-bottom: 0; }
+	  @media only screen and (max-width: 767px) {
+		.poca-newsletter-area .newsletter-content h6 {
+		  font-size: 14px; } }
+	.poca-newsletter-area .newsletter-form {
+	  position: relative;
+	  z-index: 1;
+	  width: 100%; }
+	  .poca-newsletter-area .newsletter-form .form-control {
+		width: 100%;
+		height: 45px;
+		border-radius: 30px;
+		background-color: #ffffff;
+		border: none;
+		padding: 0 30px;
+		font-size: 13px;
+		font-style: italic; }
+		.poca-newsletter-area .newsletter-form .form-control:focus {
+		  box-shadow: none; }
+	  .poca-newsletter-area .newsletter-form button {
+		font-weight: 600;
+		letter-spacing: 1px;
+		padding: 0;
+		width: 140px;
+		text-transform: uppercase;
+		border: none;
+		border-radius: 0 30px 30px 0;
+		position: absolute;
+		line-height: 47px;
+		top: 0;
+		right: 0;
+		z-index: 10;
+		height: 45px;
+		background-color: #f55656;
+		color: #ffffff; }
+		.poca-newsletter-area .newsletter-form button:focus, .poca-newsletter-area .newsletter-form button:hover {
+		  box-shadow: none;
+		  background-color: #000000; }
+		@media only screen and (max-width: 767px) {
+		  .poca-newsletter-area .newsletter-form button {
+			width: 120px;
+			letter-spacing: 0; } }
+  
